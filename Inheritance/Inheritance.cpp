@@ -4,6 +4,19 @@
 #include <iostream>
 
 template <class T>
+class Pa {
+    T a;
+    T b;
+    Pa(T t1, T t2) :a{ t1 }, b{ t2 } {};
+
+};
+
+template <class T>
+class P2 :public Pa <T> {
+    T c;
+public :
+    P2(T t3, T t2, T t1) : Pa<T>(t1, t2), c{ t3 }{};
+};
 
 int main()
 {
